@@ -4,7 +4,7 @@
 
 static uintptr_t jmp_ptrs[128];
 
-bool replaceFuncAtAddr(void* src, void* repl, uint8_t bak[static 6]) {
+bool replaceFuncAtAddr(void* src, void* repl, uint8_t* bak) {
     if (!src || !repl)
         return false;
 

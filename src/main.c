@@ -358,12 +358,13 @@ WRAP_FN_IFACE {
     static HINSTANCE origDLL;
     if (!origDLL) {
         char path[MAX_PATH];
-
-        memset(path, 0, sizeof(path));
-        GetSystemDirectory(path, MAX_PATH);
-
-        /* Append dll name */
-        strncat(path, "\\"WRAP_DLL_NAME".dll", MAX_PATH);
+        UINT len = GetSystemDirectory(path, MAX_PATH);
+        if (len == 0 || len >= MAX_PATH)
+            ExitProcess(1);
+        /* Append dll name using the actual remaining space in path,
+         * instead of MAX_PATH (which ignores what GetSystemDirectory
+         * already wrote and can't be proven safe by the compiler) */
+        snprintf(path + len, MAX_PATH - len, "\\%s.dll", WRAP_DLL_NAME);
 
         origDLL = LoadLibrary(path);
         if (!origDLL)
