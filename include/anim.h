@@ -5,4 +5,4 @@
 
 void anim_patch();
 
-#endif
+#endif //ANIM_H

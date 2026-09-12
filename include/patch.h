@@ -2,6 +2,7 @@
 #define PATCH_H
 
 #include <stdbool.h>
+#include <stddef.h>
 #include <stdint.h>
 
 /* Replace first instruction of code at src with jump to repl */

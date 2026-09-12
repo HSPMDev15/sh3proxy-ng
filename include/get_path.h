@@ -11,4 +11,4 @@ enum resource_t {
 int repl_updateSH2InstallDir();
 char* repl_getAbsPathImpl(enum resource_t type, const char*);
 
-#endif
+#endif //GET_PATH_H

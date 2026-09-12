@@ -1,5 +1,6 @@
 #include "anim.h"
 #include "patch.h"
+#include <stddef.h>
 
 void repl_4c0890();
 

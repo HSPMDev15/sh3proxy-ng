@@ -10,4 +10,4 @@ uint32_t sync_getticks();
 void sync_delay(uint32_t ms);
 void sync_patch();
 
-#endif
+#endif //SYNC_H

@@ -8,4 +8,4 @@ extern char savepathOverride[];
 extern int resX, resY, texRes;
 extern bool fullscreen;
 
-#endif
+#endif //PERFS_H

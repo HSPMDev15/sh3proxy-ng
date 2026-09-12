@@ -22,4 +22,4 @@ int repl_41b250_1();
 int repl_41b250_2();
 int repl_setRefreshRate(int rate);
 
-#endif
+#endif //VIDEO_H

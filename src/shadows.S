@@ -1,3 +1,7 @@
+// these are only created during runtime 
+.weak _ishadowRes
+.weak _shadowRes
+
 .globl _repl_setShadowTexRes, _repl_setShadowRes, _repl_readLightOp_case0, _repl_readLightOp_case3
 .text
 
